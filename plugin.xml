@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	id="cordova-plugin-webserver"
-	version="1.0.1">
+	version="1.0.2">
 
 	<name>CordovaWebServer</name>
 	<description>Cordova WebServer Plugin</description>
@@ -11,38 +11,8 @@
 		<engine name="cordova" version=">=3.0.0" />
 	</engines>
 
-	<platform name="ios">
-		<header-file src="src/ios/GCDWebServer/Core/GCDWebServer.h" />
-		<source-file src="src/ios/GCDWebServer/Core/GCDWebServer.m" />
-		<header-file src="src/ios/GCDWebServer/Core/GCDWebServerConnection.h" />
-		<source-file src="src/ios/GCDWebServer/Core/GCDWebServerConnection.m" />
-		<header-file src="src/ios/GCDWebServer/Core/GCDWebServerFunctions.h" />
-		<source-file src="src/ios/GCDWebServer/Core/GCDWebServerFunctions.m" />
-		<header-file src="src/ios/GCDWebServer/Core/GCDWebServerHTTPStatusCodes.h" />
-		<header-file src="src/ios/GCDWebServer/Core/GCDWebServerPrivate.h" />
-		<header-file src="src/ios/GCDWebServer/Core/GCDWebServerRequest.h" />
-		<source-file src="src/ios/GCDWebServer/Core/GCDWebServerRequest.m" />
-		<header-file src="src/ios/GCDWebServer/Core/GCDWebServerResponse.h" />
-		<source-file src="src/ios/GCDWebServer/Core/GCDWebServerResponse.m" />
-		
-		<header-file src="src/ios/GCDWebServer/Requests/GCDWebServerDataRequest.h" />
-		<source-file src="src/ios/GCDWebServer/Requests/GCDWebServerDataRequest.m" />
-		<header-file src="src/ios/GCDWebServer/Requests/GCDWebServerFileRequest.h" />
-		<source-file src="src/ios/GCDWebServer/Requests/GCDWebServerFileRequest.m" />
-		<header-file src="src/ios/GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.h" />
-		<source-file src="src/ios/GCDWebServer/Requests/GCDWebServerMultiPartFormRequest.m" />
-		<header-file src="src/ios/GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.h" />
-		<source-file src="src/ios/GCDWebServer/Requests/GCDWebServerURLEncodedFormRequest.m" />
-		
-		<header-file src="src/ios/GCDWebServer/Responses/GCDWebServerDataResponse.h" />
-		<source-file src="src/ios/GCDWebServer/Responses/GCDWebServerDataResponse.m" />
-		<header-file src="src/ios/GCDWebServer/Responses/GCDWebServerErrorResponse.h" />
-		<source-file src="src/ios/GCDWebServer/Responses/GCDWebServerErrorResponse.m" />
-		<header-file src="src/ios/GCDWebServer/Responses/GCDWebServerFileResponse.h" />
-		<source-file src="src/ios/GCDWebServer/Responses/GCDWebServerFileResponse.m" />
-		<header-file src="src/ios/GCDWebServer/Responses/GCDWebServerStreamedResponse.h" />
-		<source-file src="src/ios/GCDWebServer/Responses/GCDWebServerStreamedResponse.m" />
-		
+	<platform name="ios">		
+		<framework src="src/ios/GCDWebServer.framework" custom="true" />
 		<framework src="libz.dylib" />
 		<framework src="CFNetwork.framework" />
 		<framework src="SystemConfiguration.framework" />
