@@ -528,6 +528,7 @@
 					i386,
 					armv7s,
 				);
+				CLANG_MODULES_AUTOLINK = NO;
 				DEAD_CODE_STRIPPING = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,6 +546,7 @@
 					i386,
 					armv7s,
 				);
+				CLANG_MODULES_AUTOLINK = NO;
 				DEAD_CODE_STRIPPING = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -589,6 +591,7 @@
 		02C583881B1E28A30010DDB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_MODULES_AUTOLINK = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -596,6 +599,7 @@
 		02C583891B1E28A30010DDB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_MODULES_AUTOLINK = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -637,6 +641,7 @@
 				02C583891B1E28A30010DDB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
