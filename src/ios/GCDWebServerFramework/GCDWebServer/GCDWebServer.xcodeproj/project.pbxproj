@@ -48,7 +48,6 @@
 		023EB29D1B1E048C0062D75A /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 023EB2831B1E048C0062D75A /* GCDWebServerFileResponse.m */; };
 		023EB29E1B1E048C0062D75A /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 023EB2851B1E048C0062D75A /* GCDWebServerStreamedResponse.m */; };
 		023EB29F1B1E048C0062D75A /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 023EB2851B1E048C0062D75A /* GCDWebServerStreamedResponse.m */; };
-		023EB2A11B1E05120062D75A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 023EB2A01B1E05120062D75A /* libz.dylib */; };
 		023EB2A31B1E051B0062D75A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023EB2A21B1E051B0062D75A /* CFNetwork.framework */; };
 		023EB2A51B1E05350062D75A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023EB2A41B1E05350062D75A /* MobileCoreServices.framework */; };
 		023EB2A71B1E055A0062D75A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 023EB2A61B1E055A0062D75A /* SystemConfiguration.framework */; };
@@ -128,7 +127,6 @@
 		023EB2831B1E048C0062D75A /* GCDWebServerFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerFileResponse.m; sourceTree = "<group>"; };
 		023EB2841B1E048C0062D75A /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerStreamedResponse.h; sourceTree = "<group>"; };
 		023EB2851B1E048C0062D75A /* GCDWebServerStreamedResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerStreamedResponse.m; sourceTree = "<group>"; };
-		023EB2A01B1E05120062D75A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		023EB2A21B1E051B0062D75A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		023EB2A41B1E05350062D75A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		023EB2A61B1E055A0062D75A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -144,7 +142,6 @@
 				023EB2A71B1E055A0062D75A /* SystemConfiguration.framework in Frameworks */,
 				023EB2A51B1E05350062D75A /* MobileCoreServices.framework in Frameworks */,
 				023EB2A31B1E051B0062D75A /* CFNetwork.framework in Frameworks */,
-				023EB2A11B1E05120062D75A /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +214,6 @@
 				023EB2A61B1E055A0062D75A /* SystemConfiguration.framework */,
 				023EB2A41B1E05350062D75A /* MobileCoreServices.framework */,
 				023EB2A21B1E051B0062D75A /* CFNetwork.framework */,
-				023EB2A01B1E05120062D75A /* libz.dylib */,
 				02B7B0061B1DE66B00D4069D /* GCDWebServer */,
 				02B7B0051B1DE66B00D4069D /* Products */,
 			);
@@ -530,7 +526,10 @@
 				);
 				CLANG_MODULES_AUTOLINK = NO;
 				DEAD_CODE_STRIPPING = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-libz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
@@ -548,7 +547,10 @@
 				);
 				CLANG_MODULES_AUTOLINK = NO;
 				DEAD_CODE_STRIPPING = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-libz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
