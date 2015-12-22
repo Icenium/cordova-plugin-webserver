@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2012-2014, Pierre-Olivier Latour
+ Copyright (c) 2012-2015, Pierre-Olivier Latour
  All rights reserved.
  
  Redistribution and use in source and binary forms, with or without
@@ -28,18 +28,33 @@
 #import "GCDWebServerRequest.h"
 
 /**
- *  The GCDWebServerFileRequest subclass of GCDWebServerRequest stores the body
- *  of the HTTP request to a file on disk.
+ *  The GCDWebServerDataRequest subclass of GCDWebServerRequest stores the body
+ *  of the HTTP request in memory.
  */
-@interface GCDWebServerFileRequest : GCDWebServerRequest
+@interface GCDWebServerDataRequest : GCDWebServerRequest
 
 /**
- *  Returns the path to the temporary file containing the request body.
- *
- *  @warning This temporary file will be automatically deleted when the
- *  GCDWebServerFileRequest is deallocated. If you want to preserve this file,
- *  you must move it to a different location beforehand.
+ *  Returns the data for the request body.
  */
-@property(nonatomic, readonly) NSString* temporaryPath;
+@property(nonatomic, readonly) NSData* data;
+
+@end
+
+@interface GCDWebServerDataRequest (Extensions)
+
+/**
+ *  Returns the data for the request body interpreted as text. If the content
+ *  type of the body is not a text one, or if an error occurs, nil is returned.
+ *
+ *  The text encoding used to interpret the data is extracted from the
+ *  "Content-Type" header or defaults to UTF-8.
+ */
+@property(nonatomic, readonly) NSString* text;
+
+/**
+ *  Returns the data for the request body interpreted as a JSON object. If the
+ *  content type of the body is not JSON, or if an error occurs, nil is returned.
+ */
+@property(nonatomic, readonly) id jsonObject;
 
 @end

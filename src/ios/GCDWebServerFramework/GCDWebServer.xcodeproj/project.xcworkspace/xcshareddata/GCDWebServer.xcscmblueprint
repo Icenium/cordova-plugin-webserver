@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6F2A0C8DB34C8D2615F169C091B972626DBCAFFD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6F2A0C8DB34C8D2615F169C091B972626DBCAFFD" : 0,
+    "F6F96CA34C5878B0A9123C7C37855491A5E599DA" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9C015FBB-7D0E-4FCB-8E25-E59E936D9FD3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6F2A0C8DB34C8D2615F169C091B972626DBCAFFD" : "cordova-plugin-webserver\/",
+    "F6F96CA34C5878B0A9123C7C37855491A5E599DA" : "cordova-plugin-webserver\/src\/ios\/GCDWebServer\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GCDWebServer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "src\/ios\/Project\/GCDWebServer\/GCDWebServer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Icenium\/cordova-plugin-webserver.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6F2A0C8DB34C8D2615F169C091B972626DBCAFFD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:swisspol\/GCDWebServer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F6F96CA34C5878B0A9123C7C37855491A5E599DA"
+    }
+  ]
+}
